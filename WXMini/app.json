@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/webrtc-room/one/one",
+    "pages/webrtc-room/index1/index1",
+    "pages/webrtc-room/index/index",
+    "pages/webrtc-room/index2/index2",
+    "pages/webrtc-room/room/room",
+    "pages/webrtc-room/oneroom/oneroom"
+  ],
+  "window": {
+    "backgroundColor": "#888",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "腾讯视频云",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

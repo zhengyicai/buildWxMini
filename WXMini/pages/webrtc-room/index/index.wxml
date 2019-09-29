@@ -1,0 +1,50 @@
+<view class='container-box'>
+  <view class="input-box">
+    <picker mode="selector" bindchange="userChange" value="{{index}}" range="{{users}}" range-key="equipmentName">
+      <view class="picker">{{users[index]['equipmentName']}}</view>
+    </picker>
+  </view>
+  <!-- 显示下拉框列表 -->
+  <view class="input-box" style="display:none">
+    <input value="{{roomNo}}" maxlength="20" bindinput='bindRoomNo' placeholder="请输入房间号" placeholder-style="color:#ffffff;opacity: 0.55;" />
+  </view>
+  <radio-group class="radio-group" bindchange="radioChange" style="display:none">
+    <label class="radio">
+      <radio color='#006eff' value="bigsmall" checked='true' id="bigsmall" />
+      大小画面
+    </label>
+    <label class="radio">
+      <radio color='#006eff' value="float" id="float" />
+      嵌套布局
+    </label>
+    <label class="radio">
+      <radio color='#006eff' value="grid" id="grid" />
+      网格布局
+    </label>
+  </radio-group>
+  <view class="PrevImgBox" style="display:none">
+    <view class="PrevCell">
+      <label for="bigsmall">
+        <image src="/assets/images/bigsmall.png" style="width:200rpx;height:228rpx" class="{{template==='bigsmall'?'selected':''}}" />
+      </label>
+    </view>
+    <view class="PrevCell">
+      <label for="float">
+        <image src="/assets/images/float.png" style="width:200rpx;height:228rpx" class="{{template==='float'?'selected':''}}" />
+      </label>
+    </view>
+    <view class="PrevCell">
+      <label for="grid">
+        <image src="/assets/images/grid.png" style="width:200rpx;height:228rpx" class="{{template==='grid'?'selected':''}}" />
+      </label>
+    </view>
+  </view>
+</view>
+<view class='bottom-btn'> 
+  <button type="primary" bindtap="joinRoom" hover-class="none" style='margin-top:10px'>舱内通话</button>
+  <button type="primary" bindtap="joinRoom1" hover-class="none" style='margin-top:10px'>舱外通话</button>
+</view>
+
+<view class='bottom-btn2'>
+  <button type="error" style='background-color:#577785;color:white' bindtap="unlockRoom" hover-class="none">点击解绑当前用户</button>
+</view>
